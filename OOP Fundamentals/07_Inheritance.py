@@ -2,6 +2,10 @@
 # This establishes a hierarchical relationship and promotes immense reusability,
 # allowing the new object to build upon existing foundations rather than starting from scratch.
 
+# python resolves the ambiguity presented by multiple inheritance by using the concept of MRO that is method
+# resolution order, which uses a C3 Linearization Algorithm to decide on a fixed list of classes, then it goes through
+# that list to determine which class method to execute
+
 class Car:
     def __init__(self, wheels: int, max_speed: int, num_of_seats: int):
         self._wheels = wheels
